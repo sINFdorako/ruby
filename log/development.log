@@ -1,0 +1,252 @@
+Started GET "/" for ::1 at 2021-10-23 13:42:19 +0200
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/dominik/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/dominik/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 9.9ms | Allocations: 522)
+Completed 200 OK in 30ms (Views: 16.3ms | ActiveRecord: 0.0ms | Allocations: 5639)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTopics (20211023114552)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "topics" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211023114552"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-10-23 11:46:56.198916"], ["updated_at", "2021-10-23 11:46:56.198916"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2021-10-23 13:47:31 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/dominik/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/dominik/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.1ms | Allocations: 222)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 972)
+
+
+Started GET "/app/views/topics" for ::1 at 2021-10-23 13:47:42 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/topics"):
+  
+Started GET "/" for ::1 at 2021-10-23 13:47:46 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/dominik/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/dominik/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 46)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 415)
+
+
+Started GET "/" for ::1 at 2021-10-23 13:54:31 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/dominik/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/dominik/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.6ms | Allocations: 45)
+Completed 200 OK in 3ms (Views: 1.4ms | Allocations: 401)
+
+
+Started GET "/topics" for ::1 at 2021-10-23 13:54:33 +0200
+Processing by TopicsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering topics/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/topics/index.html.erb:15
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  ↳ app/views/topics/index.html.erb:15
+  Rendered topics/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1862)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/dominik/Documents/railsbridge/ruby/public/packs
+[Webpacker] warning ../../../package.json: No license field
+
+[Webpacker] Hash: e2a8a876c5815bee1e21
+Version: webpack 4.46.0
+Time: 1921ms
+Built at: 10/23/2021 1:54:37 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-e421b4aa3f716bebdab1.js    125 KiB  application  [emitted] [immutable]  application
+js/application-e421b4aa3f716bebdab1.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-e421b4aa3f716bebdab1.js js/application-e421b4aa3f716bebdab1.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 4676.9ms | Allocations: 19478)
+Completed 200 OK in 4686ms (Views: 4680.6ms | ActiveRecord: 0.5ms | Allocations: 21215)
+
+
+Started GET "/topics/new" for ::1 at 2021-10-23 13:54:40 +0200
+Processing by TopicsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering topics/new.html.erb within layouts/application
+  Rendered topics/_form.html.erb (Duration: 33.8ms | Allocations: 4730)
+  Rendered topics/new.html.erb within layouts/application (Duration: 35.2ms | Allocations: 5081)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 45.5ms | Allocations: 8528)
+Completed 200 OK in 60ms (Views: 46.2ms | ActiveRecord: 1.2ms | Allocations: 12297)
+
+
+Started GET "/topics" for ::1 at 2021-10-23 13:54:45 +0200
+Processing by TopicsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  ↳ app/views/topics/index.html.erb:15
+  Rendered topics/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 717)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 4176)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.3ms | Allocations: 4637)
+
+
+Started GET "/topics/new" for ::1 at 2021-10-23 13:55:03 +0200
+Processing by TopicsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering topics/new.html.erb within layouts/application
+  Rendered topics/_form.html.erb (Duration: 2.4ms | Allocations: 672)
+  Rendered topics/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 785)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 4233)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms | Allocations: 4706)
+
+
+Started POST "/topics" for ::1 at 2021-10-23 13:55:14 +0200
+Processing by TopicsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "topic"=>{"title"=>"GreatTool", "description"=>"This is just Great!"}, "commit"=>"Create Topic"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/topics_controller.rb:27:in `block in create'
+  [1m[36mTopic Create (0.8ms)[0m  [1m[32mINSERT INTO "topics" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "GreatTool"], ["description", "This is just Great!"], ["created_at", "2021-10-23 11:55:14.824440"], ["updated_at", "2021-10-23 11:55:14.824440"]]
+  ↳ app/controllers/topics_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/topics_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/topics/1
+Completed 302 Found in 13ms (ActiveRecord: 2.7ms | Allocations: 3195)
+
+
+Started GET "/topics/1" for ::1 at 2021-10-23 13:55:14 +0200
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/topics_controller.rb:62:in `set_topic'
+  Rendering layout layouts/application.html.erb
+  Rendering topics/show.html.erb within layouts/application
+  Rendered topics/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 283)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3692)
+Completed 200 OK in 37ms (Views: 8.4ms | ActiveRecord: 0.2ms | Allocations: 7371)
+
+
+Started GET "/topics" for ::1 at 2021-10-23 13:55:31 +0200
+Processing by TopicsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  ↳ app/views/topics/index.html.erb:15
+  Rendered topics/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 837)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 4295)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.2ms | Allocations: 4757)
+
+
+Started GET "/topics/1" for ::1 at 2021-10-23 13:55:50 +0200
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/topics_controller.rb:62:in `set_topic'
+  Rendering layout layouts/application.html.erb
+  Rendering topics/show.html.erb within layouts/application
+  Rendered topics/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 109)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 3567)
+Completed 200 OK in 18ms (Views: 12.8ms | ActiveRecord: 0.3ms | Allocations: 4568)
+
+
+Started GET "/topics" for ::1 at 2021-10-23 13:55:52 +0200
+Processing by TopicsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  ↳ app/views/topics/index.html.erb:15
+  Rendered topics/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 823)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 4282)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.2ms | Allocations: 4750)
+
+
+Started GET "/topics/1/edit" for ::1 at 2021-10-23 13:55:53 +0200
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/topics_controller.rb:62:in `set_topic'
+  Rendering layout layouts/application.html.erb
+  Rendering topics/edit.html.erb within layouts/application
+  Rendered topics/_form.html.erb (Duration: 2.0ms | Allocations: 729)
+  Rendered topics/edit.html.erb within layouts/application (Duration: 3.2ms | Allocations: 992)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 4439)
+Completed 200 OK in 20ms (Views: 14.8ms | ActiveRecord: 0.2ms | Allocations: 5569)
+
+
+Started GET "/topics" for ::1 at 2021-10-23 13:55:55 +0200
+Processing by TopicsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  ↳ app/views/topics/index.html.erb:15
+  Rendered topics/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 822)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 4285)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.2ms | Allocations: 4746)
+
+
+Started GET "/topics" for ::1 at 2021-10-23 14:02:55 +0200
+Processing by TopicsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering topics/index.html.erb within layouts/application
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/topics/index.html.erb:15
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  ↳ app/views/topics/index.html.erb:15
+  Rendered topics/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 3874)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 7377)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.3ms | Allocations: 8484)
+
+
+Started GET "/" for ::1 at 2021-10-23 14:02:56 +0200
+Processing by TopicsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  ↳ app/views/topics/index.html.erb:15
+  Rendered topics/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 822)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 4280)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.2ms | Allocations: 4738)
+
+
+Started GET "/rails/info" for ::1 at 2021-10-23 14:04:22 +0200
+Processing by Rails::InfoController#index as HTML
+Redirected to http://localhost:3000/rails/info/routes
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 815)
+
+
+Started GET "/rails/info/routes" for ::1 at 2021-10-23 14:04:22 +0200
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout /Users/dominik/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/dominik/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/dominik/.rvm/gems/ruby-3.0.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [35 times] (Duration: 8.5ms | Allocations: 5327)
+  Rendered /Users/dominik/.rvm/gems/ruby-3.0.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 1.6ms | Allocations: 725)
+  Rendered /Users/dominik/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 23.4ms | Allocations: 9694)
+  Rendered layout /Users/dominik/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/layouts/application.html.erb (Duration: 24.5ms | Allocations: 10018)
+Completed 200 OK in 33ms (Views: 26.4ms | ActiveRecord: 0.0ms | Allocations: 11576)
+
+
+Started GET "/sandwich" for ::1 at 2021-10-23 14:04:39 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/sandwich"):
+  
